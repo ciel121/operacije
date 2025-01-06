@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operacije</title>
+</head>
+
+<body>
+    <script>
+        let numberA = parseFloat(prompt("Please enter number A:"));
+        let operation = prompt("Please enter operation (+, -, *, /):");
+        let numberB = parseFloat(prompt("Please enter number B:"));
+
+        let result = sum(numberA, operation, numberB);
+
+        alert("The result is: " + result);
+
+        function sum(numberA, operation, numberB) {
+            let result;
+
+            switch (operation) {
+                case '+':
+                    result = numberA + numberB;
+                    break;
+                case '-':
+                    result = numberA - numberB;
+                    break;
+                case '*':
+                    result = numberA * numberB;
+                    break;
+                case '/':
+                    result = numberA / numberB;
+                    break;
+                default:
+                    return "Error: Invalid operation.";
+            }
+            return result;
+        }
+    </script>
+</body>
+
+</html>
